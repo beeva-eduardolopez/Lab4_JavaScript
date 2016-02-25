@@ -24,6 +24,7 @@ function createSquare(){
 	square.onclick = function changeColor(){
 		this.style.backgroundColor = randomColor();
 	}
+	square.style.display = 'inline-block';
 	document.body.appendChild(square);
 	
 }
