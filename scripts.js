@@ -1,5 +1,20 @@
+document.addEventListener('DOMContentLoaded', function(){
+    var element = document.getElementById("text1");
+    element.style.color = 'red';
+    
+});
+
 function myFunction() {
     document.getElementById("demo").innerHTML = "Hello World!";
+}
+
+function checkAge(){
+    var age = prompt('What is your age?');
+    if(age<23){
+        alert('less that 23');
+    }else{
+         alert('more or equal 23'); 
+    }
 }
 
 function add(op1, op2) {
