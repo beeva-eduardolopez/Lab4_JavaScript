@@ -11,17 +11,19 @@
         <p>When you click "Try it", a function will be called.</p>
         <p>The function will display a message.</p>
         <button onclick="myFunction()">Try it</button>
+        <p id="demo"></p>
         
         <h1> Ages</h1>
         <button onclick="checkAge()">Check Age</button>
+        
         <h1>My Calculator</h1>
         <input id="op1" type="number" placeholder="value1">
         <input id="op2" type="number" placeholder="value2">
-        <button onclick="add(op1, op2)"> Add</button>
-        <button onclick="subtract(op1, op2)"> Subtract</button>
-        <button onclick="multiply(op1, op2)"> Multiply</button>
-        <button onclick="divide(op1, op2)"> Divide</button>
-        <p id="demo"></p>
+        <button onclick="calculate('add')"> Add</button>
+        <button onclick="calculate('subtract')"> Subtract</button>
+        <button onclick="calculate('multiply')"> Multiply</button>
+        <button onclick="calculate('divide')"> Divide</button> 
+        
         <h1>Paragraph</h1>
         <button onclick="addParagraph()"> Add Paragraph</button>
     </body>
