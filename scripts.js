@@ -24,6 +24,15 @@ function createSquare(){
 	square.onclick = function changeColor(){
 		this.style.backgroundColor = randomColor();
 	}
+	var item = document.getElementsByClassName('square');
+	square.id = item.length;
+	square.onmouseover= function getId(){
+		
+	}
+	square.ondblclick = function deleteSquare(){
+		var idItem = square.id;
+		document.getElementById(idItem).remove();
+	}
 	square.style.display = 'inline-block';
 	document.body.appendChild(square);
 	
