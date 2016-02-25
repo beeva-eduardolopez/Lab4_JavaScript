@@ -10,14 +10,12 @@ function myFunction() {
 
 function checkAge(){
     var age = prompt('What is your age?');
-    if(age<23){
+    if(age < 23){
         alert('less that 23');
     }else{
          alert('more or equal 23'); 
     }
 }
-
-
 
 function add(op1, op2) {
     return op1 + op2;
