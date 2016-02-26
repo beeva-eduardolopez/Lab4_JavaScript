@@ -31,7 +31,14 @@ function createSquare(){
 	}
 	square.ondblclick = function deleteSquare(){
 		var idItem = square.id;
-		document.getElementById(idItem).remove();
+		if(squares[0].id === square.id){
+			alert('first');
+		}else if(squares[squares.length-1].id === square.id){
+			alert('last');
+		}else{
+			document.getElementById(idItem).remove();
+		}
+
 	}
 	square.style.display = 'inline-block';
 	document.body.appendChild(square);
