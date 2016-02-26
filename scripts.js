@@ -30,15 +30,28 @@ function createSquare(){
 	square.innerHTML = "<p class='hidden-p' id='para'"+square.id+">"+square.id +"</p>" ;
 	
 	square.ondblclick = function deleteSquare(){
-		var idItem = square.id;
-		if(squares[0].id === square.id){
-			alert('first');
-		}else if(squares[squares.length-1].id === square.id){
-			alert('last');
-		}else{
-			document.getElementById(idItem).remove();
-		}
-
+		var idItem = parseInt(square.id);
+        function isOdd(idItem) {
+             return idItem % 2;
+        }
+        if(isOdd(idItem)){
+            if(document.getElementById(idItem).nextElementSibling===null){
+                 alert('that the element does not exist');
+            }else{
+                document.getElementById(idItem).nextSibling.remove();
+            }
+        }else{
+            if(document.getElementById(idItem).previousElementSibling===null){
+                 alert('that the element does not exist') ;
+            }else{
+                var id = document.getElementById(idItem).previousElementSibling.id;
+                if(id === null || id === ""){
+                      alert('that the element does not exist') ;
+                }else{
+                     document.getElementById(idItem).previousElementSibling.remove();
+                }
+            }         
+        }
 	}
 	square.style.display = 'inline-block';
 	document.body.appendChild(square);
