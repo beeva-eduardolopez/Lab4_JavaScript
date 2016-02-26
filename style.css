@@ -10,7 +10,17 @@
 	margin: 10px;
 }
 
-p{
-	font-size: 800%;
+.hidden-p {
+    opacity:0;
+    font-size: 800%;
 	text-align: center;
+    color: white;
+}
+.hidden-p:hover {
+    font-size: 800%;
+	text-align: center;
+    color: white;
+    opacity:1;
+    -webkit-transition: opacity .25s ease-in-out .0s;
+    transition: opacity .25s ease-in-out .0s;
 }

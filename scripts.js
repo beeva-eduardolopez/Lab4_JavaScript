@@ -27,12 +27,8 @@ function createSquare(){
 	}
 	var item = document.getElementsByClassName('square');
 	square.id = item.length;
-	square.innerHTML = "<p id='para"+square.id+">"+square.id +"</p>" ;
+	square.innerHTML = "<p class='hidden-p' id='para'"+square.id+">"+square.id +"</p>" ;
 	
-	square.onmouseover= function showId(){
-		//var para = document.getElementById('para'+square.id);
-		//para.style.visibility=null;
-	}
 	square.ondblclick = function deleteSquare(){
 		var idItem = square.id;
 		if(squares[0].id === square.id){
