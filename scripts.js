@@ -20,14 +20,18 @@ return randomColor;
 function createSquare(){
 	
 	var square = document.createElement('div');
+
 	square.className = 'square';
 	square.onclick = function changeColor(){
 		this.style.backgroundColor = randomColor();
 	}
 	var item = document.getElementsByClassName('square');
 	square.id = item.length;
-	square.onmouseover= function getId(){
-		
+	square.innerHTML = "<p id='para"+square.id+">"+square.id +"</p>" ;
+	
+	square.onmouseover= function showId(){
+		//var para = document.getElementById('para'+square.id);
+		//para.style.visibility=null;
 	}
 	square.ondblclick = function deleteSquare(){
 		var idItem = square.id;
